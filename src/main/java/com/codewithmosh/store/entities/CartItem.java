@@ -1,9 +1,9 @@
 package com.codewithmosh.store.entities;
 
+import com.codewithmosh.store.product.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.ColumnDefault;
 
 import java.math.BigDecimal;
 
