@@ -6,7 +6,7 @@ spring:
     accessTokenExpiration: 7200 #2H
     refreshTokenExpiration: 604800 #7d
   profiles:
-    active: prod
+    active: ${SPRING_PROFILES_ACTIVE}
   stripe:
     secretKey: ${STRIPE_SECRET_KEY}
     webhookSecretKey: ${STRIPE_WEBHOOK_SECRET_KEY}
