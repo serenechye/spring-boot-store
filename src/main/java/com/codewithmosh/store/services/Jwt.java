@@ -2,7 +2,6 @@ package com.codewithmosh.store.services;
 
 import com.codewithmosh.store.entities.Role;
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 
 import javax.crypto.SecretKey;

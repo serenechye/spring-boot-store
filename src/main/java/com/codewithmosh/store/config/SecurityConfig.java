@@ -60,7 +60,9 @@ public class SecurityConfig {
             .sessionManagement(c ->
                     c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .csrf(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests( c -> {
+            .authorizeHttpRequests( c ->
+                {
+                    System.out.println("featureSecurityRules:: "+featureSecurityRules.size());
                     featureSecurityRules.forEach(rules -> rules.configure(c));
                     c.anyRequest().authenticated();
                 }
