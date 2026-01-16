@@ -62,9 +62,12 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests( c ->
                 {
-                    System.out.println("featureSecurityRules:: "+featureSecurityRules.size());
-                    featureSecurityRules.forEach(rules -> rules.configure(c));
+                    featureSecurityRules.forEach(rules -> {
+                        rules.configure(c);
+                    }
+                    );
                     c.anyRequest().authenticated();
+                    System.out.println("featureSecurityRules:: "+featureSecurityRules.size());
                 }
             ).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling(c -> {
