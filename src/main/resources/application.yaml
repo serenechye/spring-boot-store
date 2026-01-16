@@ -1,6 +1,4 @@
 spring:
-#  config:
-#    import: "optional:classpath:.env[.properties]"
   application:
     name: store
   jwt:
